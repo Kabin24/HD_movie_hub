@@ -5,21 +5,9 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-      
-      </div>
-      <h1>Hello worlds</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        
-      </div>
-     
-    </>
-  )
+  return 
+      <div className='App'> App</div>
+  
 }
 
 export default App
