@@ -25,7 +25,7 @@ const Header = () => {
 
 
   const controlNavbar =() => {
-    console.log(window.scrollY)
+    
     if(window.scrollY>200) {
       if(window.scrollY>lastScrollY && !mobileMenu) {
         setShow("hide")
@@ -76,10 +76,14 @@ const Header = () => {
         setMobileMenu(false);
     }
 
+    const navigateToHome = () =>  {
+      navigate("/")
+      
+    }
   return (
    <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
      <ContentWrapper>
-      <div className='logo'>
+      <div className='logo' onClick={navigateToHome}>
         <img src={logo} alt='movielogo'/>
       </div>
       <ul className="menuItems">
@@ -110,10 +114,7 @@ const Header = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                        <VscChromeClose onClick={() =>
-                       setShowSearch(false)}
-                        />
-                        
+                       <button onClick={() => { navigate(`/search/${query}`) }}>Search</button>
                     </div>
       </ContentWrapper>
      </div>
