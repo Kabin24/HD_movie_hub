@@ -5,7 +5,7 @@ import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import "./style.scss"
 import ContentWrapper from '../contentWrapper/ContentWrapper';
-import logo  from '../../assets/movix-logo.svg';
+
 import { useNavigate, useLocation } from "react-router-dom";
 
 
@@ -84,7 +84,7 @@ const Header = () => {
    <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
      <ContentWrapper>
       <div className='logo' onClick={navigateToHome}>
-        <img src={logo} alt='movielogo'/>
+        <img src="https://hdmovie2.kim/wp-content/uploads/2023/12/logo-2-1-1.webp" alt='movielogo'/>
       </div>
       <ul className="menuItems">
         <li className="menuItem" onClick={() => navigationHandler("movies")}
