@@ -19,7 +19,7 @@ const Footer = () => {
                     <li className="menuItem">FAQ</li>
       </ul>
       <div className="infoText">
-      Mobix  is a leading free streaming website 2023 that offers users the opportunity to watch movies online without the need for registration. Boasting an extensive database and a range of impressive features, we are confident that  mobix is the premier destination for free online movie viewing. We highly recommend that you do not miss out on this exceptional platform.
+      HD Movie  is a leading free streaming website 2023 that offers users the opportunity to watch movies online without the need for registration. Boasting an extensive database and a range of impressive features, we are confident that  mobix is the premier destination for free online movie viewing. We highly recommend that you do not miss out on this exceptional platform.
                 </div>
                 <div className="socialIcons">
                 <span className="icon" onClick={() => window.open('https://www.linkedin.com/in/kabin-shrestha-029062222/', '_blank')}>

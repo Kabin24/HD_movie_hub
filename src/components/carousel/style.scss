@@ -12,7 +12,7 @@
     }
     .arrow {
         font-size: 30px;
-        color: black;
+        color: rgb(12, 12, 12);
         position: absolute;
         top: 44%;
         transform: translateY(-50%);
@@ -24,7 +24,7 @@
             display: block;
         }
         &:hover {
-            opacity: 0.8;
+            opacity: 1.79;
         }
     }
     .carouselLeftNav {
@@ -139,7 +139,7 @@
                     }
                 }
                 .genres {
-                    //display: none;
+                    display: none;
                     position: relative;
                     @include md {
                         display: flex;
