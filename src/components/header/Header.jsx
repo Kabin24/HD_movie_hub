@@ -84,7 +84,7 @@ const Header = () => {
    <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
      <ContentWrapper>
       <div className='logo' onClick={navigateToHome}>
-        <img src="https://hdmovie2.kim/wp-content/uploads/2023/12/logo-2-1-1.webp" alt='movielogo'/>
+        <img src="https://hdmovie2.sh/wp-content/uploads/2024/01/Logo-2-1-1.webp" alt='movielogo'/>
       </div>
       <ul className="menuItems">
         <li className="menuItem" onClick={() => navigationHandler("movies")}
