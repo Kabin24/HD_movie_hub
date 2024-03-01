@@ -32,13 +32,14 @@ const Explore = () => {
     const [loading, setLoading] = useState(false);
     const [genre, setGenre] = useState(null);
     const [sortby, setSortby] = useState(null);
-    const { mediaType } = useParams();
+    const { mediaType, } = useParams();
 
     const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
 
     const fetchInitialData = () => {
         setLoading(true);
-        fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
+        fetchDataFromApi(`/discover/${mediaType.toLowerCase()}`, filters).then((res) => {
+            console.log("API Response for movies:", res);
             setData(res);
             setPageNum((prev) => prev + 1);
             setLoading(false);
@@ -47,7 +48,7 @@ const Explore = () => {
 
     const fetchNextPageData = () => {
         fetchDataFromApi(
-            `/discover/${mediaType}?page=${pageNum}`,
+            `/discover/${mediaType.toLowerCase()}?page=${pageNum}`,
             filters
         ).then((res) => {
             if (data?.results) {
@@ -63,6 +64,8 @@ const Explore = () => {
     };
 
     useEffect(() => {
+        console.log("location:", location);
+        console.log("mediaType:", mediaType);
         filters = {};
         setData(null);
         setPageNum(1);

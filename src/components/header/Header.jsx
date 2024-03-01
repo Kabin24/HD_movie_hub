@@ -68,9 +68,9 @@ const Header = () => {
    }
 
     const navigationHandler = (type) => {
-        if (type === "movie") {
+        if (type === "movies") {
           navigate("/explore/movies")
-        }else{
+        }else   {
           navigate("/explore/tv")
         }
         setMobileMenu(false);
@@ -87,7 +87,7 @@ const Header = () => {
         <img src="https://hdmovie2.sh/wp-content/uploads/2024/01/Logo-2-1-1.webp" alt='movielogo'/>
       </div>
       <ul className="menuItems">
-        <li className="menuItem" onClick={() => navigationHandler("movies")}
+        <li className="menuItem" onClick={() => navigationHandler("movie")}
       >Movies</li>
         <li className="menuItem" onClick={() => navigationHandler("tv")}>TV Shows</li>
         <li className="menuItem" > <HiOutlineSearch onClick={openSearch} />
@@ -114,7 +114,9 @@ const Header = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         />
-                       <button onClick={() => { navigate(`/search/${query}`) }}>Search</button>
+                       <VscChromeClose
+                                onClick={() => setShowSearch(false)}
+                            />
                     </div>
       </ContentWrapper>
      </div>

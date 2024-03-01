@@ -20,7 +20,7 @@ const SearchResult = () => {
     setLoading(true);
     fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then((res) => {
       setData(res)
-      setPageNum((prev) =>  prev +1);
+      setPageNum((prev) =>  prev + 1);
       setLoading(false)
     })
   }
